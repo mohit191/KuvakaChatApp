@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Server script comes first, then client script-->
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"> </script> 
+    <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+    <div id="joinChat">
+        <div id="joinChatDiv">
+            <h2 class="joinChatHeading">Welcome to Kuvaka Chat Room</h2>
+            <form action="/" id="loginForm">
+                <input type="text" placeholder="Enter your name" name="loginName" id="loginName" autocomplete="off" required>
+                <br/>
+                <br/>
+                <input type="submit" value="Join Chat" class="joinChatSubmit">    
+            </form>
+        </div>
+    </div>
+    <div>
+        <h2 style="text-align: center;">Welcome Back To the Chat Room!<h2>
+    </h2>
+    <nav class="logo">
+        <img="./img/logo.jpg" alt="kuvaka logo" width="10px" height="10px"> 
+    </nav>
+    <div class="container">
+    </div>
+
+    <ul id="chatMessages"></ul>
+        <form id="chatForm" action="">
+        <input name="inputMsg" id="inputMsg" autocomplete="off" />
+        <button type="submit">Send</button>
+    </form>
+
+
+   </body>
+</html>
